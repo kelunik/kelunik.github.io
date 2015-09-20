@@ -17,7 +17,7 @@ Regarding our second point, both options are possible with Amp. The issue with c
 
 ## Promises
 
-`Amp\Promise` is the basic unit for concurrency with Amp. Promises placeholders for values or tasks that aren't yet complete. You can find [more about promises](http://amphp.org/docs/amp/managing-concurrency.html#promises) in the documentation. What's important for now is just the `when` method. Basically, code using promises will look like this:
+`Amp\Promise` is the basic unit for concurrency with Amp. Promises are placeholders for values or tasks that aren't yet complete. You can find [more about promises](http://amphp.org/docs/amp/managing-concurrency.html#promises) in the documentation. What's important for now is just the `when` method. Basically, code using promises will look like this:
 
 ```php
 $promise = asyncTask(...);
