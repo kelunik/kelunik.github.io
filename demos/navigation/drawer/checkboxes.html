@@ -1,0 +1,163 @@
+<html>
+
+<head>
+	<title>Drawer Demo</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<style>
+		body {
+			margin: 0;
+			background-color: #fafafa;
+			font-size: 15px;
+			font-family: sans-serif;
+		}
+
+		a {
+			color: #ea776b;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		header {
+			background-color: #ea776b;
+			line-height: 50px;
+			color: #fff;
+		}
+
+		h1 {
+			display: inline-block;
+			line-height: 50px;
+			margin: 0;
+			padding: 0 10px;
+			vertical-align: top;
+		}
+
+		.hidden-toggle {
+			display: none;
+		}
+
+		.header-btn {
+			width: 50px;
+			height: 20px;
+			display: inline-block;
+			line-height: 20px;
+			padding: 15px 0;
+			text-align: center;
+			vertical-align: top;
+			display: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		main {
+			padding: 20px;
+			line-height: 1.35;
+		}
+
+		nav {
+			float: left;
+			width: 150px;
+		}
+
+		article {
+			margin-left: 170px;
+		}
+
+		footer {
+			clear: left;
+		}
+
+		@media (max-width: 900px) {
+			.header-btn {
+				display: inline-block;
+			}
+			nav {
+				float: none;
+				width: 85vw;
+				max-width: 250px;
+				display: none;
+			}
+			article {
+				margin-left: 0;
+			}
+			#drawer-toggle:checked ~ main nav {
+				display: block;
+				position: fixed;
+				top: 50px;
+				left: 0;
+				bottom: 0;
+				overflow: auto;
+				background-color: #fff;
+				border-right: 1px solid #ccc;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<input type="checkbox" id="drawer-toggle" class="hidden-toggle" />
+
+	<header>
+		<label for="drawer-toggle" class="header-btn">
+			<i class="fa fa-bars"></i>
+		</label>
+
+		<h1>
+			Drawer Demo
+		</h1>
+	</header>
+
+	<main>
+		<nav>
+			<h3>Menu</h3>
+
+			<ul>
+				<li>Menu Item 1</li>
+				<li>Menu Item 2</li>
+				<li>Menu Item 3</li>
+				<li>Menu Item 4</li>
+			</ul>
+
+			<h3>Help</h3>
+
+			<ul>
+				<li>Help Item 1</li>
+				<li>Help Item 2</li>
+				<li>Help Item 3</li>
+				<li>Help Item 4</li>
+			</ul>
+		</nav>
+
+		<article>
+			<p>
+				Bacon ipsum dolor amet short ribs pork hamburger ball tip turkey. Tri-tip t-bone drumstick kevin pork chop meatball pork loin shankle strip steak short loin pastrami boudin cow chuck jerky. T-bone turducken meatloaf pig, bresaola chicken tenderloin. Kevin
+				sirloin filet mignon, hamburger frankfurter strip steak turkey flank alcatra corned beef pork pork belly ham tongue. Doner alcatra cupim pork belly ball tip. Picanha alcatra jowl pancetta porchetta. Pig tail tongue turducken, alcatra frankfurter ham
+				picanha cupim short ribs porchetta hamburger ground round.
+			</p>
+
+			<p>
+				Beef cupim pork belly spare ribs porchetta pork loin capicola tri-tip meatloaf. Ham alcatra strip steak shankle chicken tail. Kevin strip steak pork tri-tip cow. Jerky capicola shankle fatback bacon cupim chicken chuck t-bone. Jerky tongue alcatra, beef
+				ribs shankle meatball pancetta ball tip ham meatloaf.
+			</p>
+
+			<p>
+				Does your own lorem ipsum text need something a little meatier? Give <a href="https://baconipsum.com/">Bacon Ipsum</a> a try!
+			</p>
+		</article>
+	</main>
+
+	<footer>
+
+	</footer>
+</body>
+
+</html>
