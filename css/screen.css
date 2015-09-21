@@ -21,7 +21,10 @@ footer { margin: 0 auto; max-width: 900px; }
 .excerpt { color: #444; }
 
 .post header { font-size: 12px; }
-.post header a { color: #666; text-decoration: none; }
+.post header a { color: #666; }
+
+footer { /* disqus color */ border-top: 2px solid rgba(0,39,59,.08); margin-top: 10px; padding: 20px 0 0 0; }
+footer a { color: #666; }
 
 code { font-family: "Source Code Pro", monospace; }
 p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,0,.05); padding: 2px 5px; }
