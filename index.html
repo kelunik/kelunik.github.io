@@ -6,10 +6,18 @@ title: kelunik's blog
 <section class="preview">
 	<header>
 		<h2><a href="{{post.url}}">{{post.title}}</a></h2>
-		<time datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
-			<i class="fa fa-clock-o"></i>
-			{{post.date | date: '%d. %B %Y'}}
-		</time>
+
+		<div class="header-sub">
+			<time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
+				<i class="fa fa-clock-o"></i>
+				{{post.date | date: '%d. %B %Y'}}
+			</time>
+
+			<span class="header-sub-item comments">
+				<i class="fa fa-comments"></i>
+				<span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{post.url}}"></span>
+			</span>
+		</div>
 	</header>
 
 	<section class="excerpt">

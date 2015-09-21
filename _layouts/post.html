@@ -24,6 +24,8 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 
 	<script>
+		var disqus_shortname = "kelunik";
+
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
@@ -45,21 +47,26 @@
 	<article class="post">
 		<header>
 			<h1>{{page.title}}</h1>
-			<a href="/"><i class="fa fa-angle-left"></i> back to overview</a>
+
+			<div class="header-sub">
+				<a href="/" class="header-sub-item"><i class="fa fa-angle-left"></i> back to overview</a>
+
+				<time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
+					<i class="fa fa-clock-o"></i>
+					{{page.date | date: '%d. %B %Y'}}
+				</time>
+
+				<span class="header-sub-item comments">
+					<i class="fa fa-comments"></i>
+					<span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{page.url}}"></span>
+				</span>
+			</div>
 		</header>
 
 		<main>
 			{{content}}
 
 			<div id="disqus_thread"></div>
-			<script type="text/javascript">
-			    var disqus_shortname = 'kelunik';
-			    (function() {
-			        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			    })();
-			</script>
 			<noscript class="disqus-noscript">Please enable Javascript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		</main>
 
@@ -67,6 +74,9 @@
 
 		</footer>
 	</article>
+
+	<script src="//kelunik.disqus.com/embed.js" async></script>
+	<script src="//kelunik.disqus.com/count.js" async></script>
 </body>
 
 </html>
