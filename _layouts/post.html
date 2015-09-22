@@ -6,11 +6,20 @@
 
 	<meta charset="utf-8" />
 
-	<meta name="twitter:card" content="summary" />
+	<meta name="description" content="{{page.excerpt | strip_html | strip_newlines}}" />
+
+	<meta name="twitter:card" content="{% if page.image == nil %}summary{% else %}summary_large_image{% endif %}" />
 	<meta name="twitter:site" content="@kelunik" />
 	<meta name="twitter:creator" content="@kelunik" />
-	<meta property="og:url" content="{{page.url}}" />
+
+	<meta property="og:url" content="{{site.url}}{{page.url}}" />
 	<meta property="og:title" content="{{page.title}}" />
+	<meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
+
+	{% if page.image != nil %}
+		<meta property="og:image" content="{{site.url}}{{page.image}}" />
+	{% endif %}
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
