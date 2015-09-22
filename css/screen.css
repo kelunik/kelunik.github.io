@@ -17,7 +17,7 @@ footer { margin: 0 auto; max-width: 900px; }
 .preview header { font-size: 12px; }
 .header-sub { color: #666; }
 .header-sub .fa { margin: 0 6px 0 0; }
-.header-sub-item { margin-right: 10px; }
+.header-sub-item, .footer-item { margin-right: 10px; }
 .excerpt { color: #444; }
 
 .post header { font-size: 12px; }
