@@ -9,6 +9,10 @@ h2 > a { color: #226cbd; text-decoration: none; }
 a { text-decoration: none; color: #226cbd; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
+blockquote { padding: 10px 20px; margin: 10px 0; background: #cef; border-left: 10px solid rgba(0,0,0,.05); }
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+
 header { margin: 0 auto; max-width: 900px; }
 main { margin: 0 auto; max-width: 900px; }
 footer { margin: 0 auto; max-width: 900px; }

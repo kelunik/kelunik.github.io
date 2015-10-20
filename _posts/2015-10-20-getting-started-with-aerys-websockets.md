@@ -6,6 +6,8 @@ Modern web technology lets us create real time apps within the users browser. We
 
 Fortunately, there's a new kind of server now which has just become open source after years of work: [Aerys](https://github.com/rdlowrey/aerys). It's an application server completely written in PHP and based on the [Amp Concurrency Framework](https://github.com/amphp/amp). If you're not familiar with Amp yet, you may want to read my last blog post ["Getting Started with Amp"](/2015/09/20/getting-started-with-amp.html) first.
 
+> Aerys is a full-featured HTTP server, but this blog post will just cover WebSockets!
+
 ## Installation
 
 Aerys can be installed using Composer, but is not yet on Packagist nor stable, so we have to add it with a repository entry to our `composer.json`.
@@ -37,6 +39,8 @@ You can start Aerys with a specific configuration using `vendor/bin/aerys -c aer
 <?php
 
 use Aerys\Host;
+use Aerys\Request;
+use Aerys\Response;
 use Aerys\Router;
 use Kelunik\Demo\Chat;
 use function Aerys\root;
@@ -45,7 +49,11 @@ use function Aerys\websocket;
 // Route "/ws" to the WebSocket endpoint.
 // You can add more routes for "/about" or other normal pages later.
 $router = (new Router())
-    ->route("GET", "ws", websocket(new Chat));
+    ->route("GET", "/test", function(Request $req, Response $resp) {
+        // just another example route
+        $resp->send("<h1>It works!</h1>");
+    })
+    ->route("GET", "/ws", websocket(new Chat));
 
 // Add document root to serve our index.html
 $root = root(__DIR__ . "/public");
