@@ -4,26 +4,20 @@ title: Getting Started with Aerys WebSockets
 ---
 Modern web technology lets us create real time apps within the users browser. WebSockets make this communication dead simple, but traditionally, we couldn't really write performant WebSocket apps in PHP, because of the single request / response model.
 
-Fortunately, there's a new kind of server now which has just become open source after years of work: [Aerys](https://github.com/rdlowrey/aerys). It's an application server completely written in PHP and based on the [Amp Concurrency Framework](https://github.com/amphp/amp). If you're not familiar with Amp yet, you may want to read my last blog post ["Getting Started with Amp"](/2015/09/20/getting-started-with-amp.html) first.
+Fortunately, there's a new kind of server now which has just become open source after years of work: [Aerys](https://github.com/amphp/aerys). It's an application server completely written in PHP and based on the [Amp Concurrency Framework](https://github.com/amphp/amp). If you're not familiar with Amp yet, you may want to read my last blog post ["Getting Started with Amp"](/2015/09/20/getting-started-with-amp.html) first.
 
 > Aerys is a full-featured HTTP server, but this blog post will just cover WebSockets!
 
 ## Installation
 
-Aerys can be installed using Composer, but is not yet on Packagist nor stable, so we have to add it with a repository entry to our `composer.json`.
+Aerys can be installed using Composer.
 
 ```json
 {
     "require": {
         "amphp/aerys": "dev-master"
     },
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:rdlowrey/aerys"
-        }
-    ]
+    "minimum-stability": "dev"
 }
 ```
 
