@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Amp
+title: Getting Started with Amp
 ---
 [`amphp/amp`](https://github.com/amphp/amp) is a non-blocking concurrency framework for PHP. It allows writing non-blocking asynchronous code in a performant and readable way.
 
