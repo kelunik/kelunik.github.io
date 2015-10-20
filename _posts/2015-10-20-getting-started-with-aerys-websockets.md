@@ -117,8 +117,14 @@ A simple implementation broadcasting all messages which are received:
 ```php
 public function onData(int $clientId, Websocket\Message $msg) {
     // yielding $msg buffers the complete payload into a single string.
-    // For very large payloads, you may want to
-    // stream those instead of buffering them.
+    // For very large payloads, you may want to stream those
+    // instead of buffering all content.
+
+    // $msg implements Amp\Promise which updates on new content and finally
+    // resolves to the full contents. Yielding an Amp\Promise in an Amp context
+    // interrupts the execution and continues as soon as the promise is resolved.
+    // For more information, please read the "Getting Started with Amp" post
+    // mentioned earlier.
     $body = yield $msg;
 	$this->endpoint->send(null, $body); // null broadcasts to all connected clients
 }
