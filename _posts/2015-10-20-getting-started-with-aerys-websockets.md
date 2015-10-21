@@ -10,7 +10,7 @@ Fortunately, there's a new kind of server now which has just become open source 
 
 ## Installation
 
-Aerys can be installed using Composer.
+Aerys can be installed using Composer and requires PHP 7.
 
 ```json
 {
