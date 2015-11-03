@@ -21,7 +21,7 @@ Aerys can be installed using Composer and requires PHP 7.
 }
 ```
 
-`composer install` adds the executable server file `vendor/bin/aerys`. You can now run it with the sample configuration by simply executing `vendor/bin/aerys` without any arguments. This will boot a server listening on [`localhost:1337`](http://localhost:1337/). When visiting that address, you should see a "Hello, world."
+`composer install` adds the executable server file `vendor/bin/aerys`. You can now run it with the sample configuration by simply executing `vendor/bin/aerys -c vendor/amphp/aerys/demo.php`. This will boot a server listening on [`localhost:1337`](http://localhost:1337/). When visiting that address, you should see a "Hello, world."
 
 ## Configuration
 
