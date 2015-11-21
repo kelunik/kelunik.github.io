@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Aerys
+tags: [php,amphp,async,aerys]
 ---
 [Aerys](https://github.com/amphp/aerys) is a new kind of server which has just become open source after years of work. It's an application server completely written in PHP and based on the [Amp Concurrency Framework](https://github.com/amphp/amp). If you're not familiar with Amp yet, you may want to read my previous blog post ["Getting Started with Amp"](/2015/09/20/getting-started-with-amp.html) first.
 

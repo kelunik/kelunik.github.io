@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Aerys WebSockets
+tags: [php,amphp,async,aerys,websocket]
 ---
 Modern web technology lets us create real time apps within the users browser. WebSockets make this communication dead simple, but traditionally, we couldn't really write performant WebSocket apps in PHP, because of the single request / response model.
 

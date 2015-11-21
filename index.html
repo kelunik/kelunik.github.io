@@ -3,25 +3,45 @@ layout: default
 title: kelunik's blog
 ---
 {% for post in site.posts %}
-<section class="preview">
-	<header>
-		<h2><a href="{{post.url}}">{{post.title}}</a></h2>
+	{% if post.tags.size > 0 %}
+		{% capture tags_content %}{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %} {% endcapture %}
+		{% for post_tag in post.tags %}
+			{% for data_tag in site.data.tags %}
+				{% if data_tag.slug == post_tag %}
+					{% assign tag = data_tag %}
+				{% endif %}
+			{% endfor %}
+			{% if tag %}
+				{% capture tags_content_temp %}{{ tags_content }}<a href="/tags/{{tag.slug}}.html">{{tag.name}}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+				{% assign tags_content = tags_content_temp %}
+			{% endif %}
+		{% endfor %}
+	{% else %}
+		{% assign tags_content = '' %}
+	{% endif %}
+	<section class="preview">
+		<header>
+			<h2><a href="{{post.url}}">{{post.title}}</a></h2>
 
-		<div class="header-sub">
-			<time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
-				<i class="fa fa-clock-o"></i>
-				{{post.date | date: '%d. %B %Y'}}
-			</time>
+			<div class="header-sub">
+				<time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
+					<i class="fa fa-clock-o"></i>
+					{{post.date | date: '%d. %B %Y'}}
+				</time>
 
-			<span class="header-sub-item comments">
-				<i class="fa fa-comments"></i>
-				<span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{post.url}}"></span>
-			</span>
-		</div>
-	</header>
+				<span class="header-sub-item comments">
+					<i class="fa fa-comments"></i>
+					<span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{post.url}}"></span>
+				</span>
 
-	<section class="excerpt">
-		{{post.excerpt}}
+				<span class="header-sub-item tags">
+					{{tags_content}}
+				</span>
+			</div>
+		</header>
+
+		<section class="excerpt">
+			{{post.excerpt}}
+		</section>
 	</section>
-</section>
 {% endfor %}
