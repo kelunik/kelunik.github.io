@@ -10,7 +10,12 @@ I added quotes everywhere and took their headings to make it easy to read the co
 
 ---
 
-**Update**: Namecheap updated their blog post and removed almost all of the criticized points.
+<div style="text-align:center">
+<b>Update</b><br>
+Namecheap updated their blog post and removed almost all of the criticized points.
+<br>
+Thanks to <a href="https://twitter.com/ZackBoehm/status/668524583310364672" target="_blank">@ZackBoehm</a> for saving the <a href="http://archive.is/qULPE" target="_blank">original blog post</a>.
+</div>
 
 ---
 
