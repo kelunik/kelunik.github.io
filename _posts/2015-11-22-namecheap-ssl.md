@@ -8,6 +8,12 @@ Namecheap published a [blog post recently explaining the difference between Name
 
 I added quotes everywhere and took their headings to make it easy to read the corresponding parts in the original blog post.
 
+---
+
+**Update**: Namecheap updated their blog post and removed almost all of the criticized points.
+
+---
+
 ## Free SSL is Encryption Only
 
 > Domain Validation certificates are excellent products, but free DV certs differ from purchased DV certs in key areas.

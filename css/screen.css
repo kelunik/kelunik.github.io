@@ -13,6 +13,8 @@ blockquote { padding: 5px 20px; margin: 10px 0; border-left: 2px solid rgba(0,10
 blockquote p:first-child { margin-top: 0; }
 blockquote p:last-child { margin-bottom: 0; }
 
+hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
+
 header { margin: 0 auto; max-width: 900px; }
 main { margin: 0 auto; max-width: 900px; }
 footer { margin: 0 auto; max-width: 900px; }
