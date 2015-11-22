@@ -7,11 +7,20 @@
 - slug: async
   name: async
 
+- slug: comment
+  name: comment
+
+- slug: encryption
+  name: encryption
+
 - slug: php
   name: php
 
 - slug: promises
   name: promises
+
+- slug: ssl
+  name: ssl
 
 - slug: websocket
   name: websocket

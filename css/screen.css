@@ -9,7 +9,7 @@ h2 > a { color: #226cbd; text-decoration: none; }
 a { text-decoration: none; color: #226cbd; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
-blockquote { padding: 10px 20px; margin: 10px 0; background: #cef; border-left: 10px solid rgba(0,0,0,.05); }
+blockquote { padding: 5px 20px; margin: 10px 0; border-left: 2px solid rgba(0,100,200,.85); color: #444; }
 blockquote p:first-child { margin-top: 0; }
 blockquote p:last-child { margin-bottom: 0; }
 
