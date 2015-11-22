@@ -48,7 +48,7 @@ The following points are all specific to LE (short for [Let's Encrypt](http://le
 
 > Short lifetimes – Free certs have 90-day lifetimes, standard. Though future automation may eliminate the need to renew every 90 days, short lifetimes will always mean more potential points of failure.
 
-This is totally wrong and currently only specific to LE. Other CAs offering free certificates do issue one year certificates like [StartSSL](http://www.startssl.com/) or [WoSign](http://www.wosign.com/english/freessl.htm).
+This is totally wrong. LE does this, but other CAs offer free one year certificates like [StartSSL](http://www.startssl.com/) or [WoSign](http://www.wosign.com/english/freessl.htm).
 
 > No wildcards – Free certificates secure single domains only. They cannot secure multiple subdomains of a domain.
 
