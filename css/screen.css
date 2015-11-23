@@ -19,6 +19,8 @@ header { margin: 0 auto; max-width: 900px; }
 main { margin: 0 auto; max-width: 900px; }
 footer { margin: 0 auto; max-width: 900px; }
 
+.related-posts { border-top: 2px solid rgba(0,39,59,.08); /* disqus color */ padding: 20px 0 10px 0; margin: 20px 0; }
+
 .preview { padding: 20px 0; border-radius: 2px; border-top: 1px solid #ddd; }
 .preview:first-of-type { border-top: 0; }
 .preview header { font-size: 12px; }
@@ -30,7 +32,7 @@ footer { margin: 0 auto; max-width: 900px; }
 .preview header, .post header, .body-tags header { font-size: 12px; }
 .preview header a, .post header a, .body-tags header a { color: #666; }
 
-footer { /* disqus color */ border-top: 2px solid rgba(0,39,59,.08); margin-top: 10px; padding: 20px 0 0 0; }
+footer { border-top: 2px solid rgba(0,39,59,.08); /* disqus color */ margin-top: 10px; padding: 20px 0 0 0; }
 footer a { color: #666; }
 
 code { font-family: "Source Code Pro", monospace; }
