@@ -1,6 +1,6 @@
 body { margin: 0; background: #323640; font-family: "Lato", sans-serif; font-size: 15px; tab-size: 4; line-height: 180%; color: #111; }
 
-article { padding: 20px 30px; background: #fff; margin: 0 auto; max-width: 960px; min-height: 100vh; box-sizing: border-box; box-shadow: 0 0 15px rgba(0,0,0,.4); }
+article { padding: 20px 30px; background: #f9f9f9; margin: 0 auto; max-width: 960px; min-height: 100vh; box-sizing: border-box; box-shadow: 0 0 15px rgba(0,0,0,.4); }
 
 h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-weight: 300; }
@@ -35,5 +35,5 @@ footer a { color: #666; }
 
 code { font-family: "Source Code Pro", monospace; }
 p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,0,.05); padding: 2px 5px; }
-pre { background-color: #fff; margin: 15px 0; padding: 20px; border-radius: 3px; }
+pre { background-color: #fff; margin: 15px -30px; padding: 20px 30px; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
 .hljs { background-color: transparent; padding: 0; margin: 0; }
