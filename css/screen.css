@@ -11,13 +11,15 @@ h2 > a { color: #226cbd; text-decoration: none; }
 a { text-decoration: none; color: #226cbd; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
-blockquote { padding: 5px 20px; margin: 10px 0; border-left: 2px solid rgba(0,100,200,.85); color: #444; }
+blockquote { padding: 10px 50px; margin: 10px -30px; position: relative; color: #444; background: #BFDFFF; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
+blockquote::before { content: "\f10d"; color: rgb(0,100,200); font-family: "FontAwesome"; font-size: 14px; opacity: .65; position: absolute; left: 30px; top: 2px; }
+blockquote::after { content: "\f10e"; color: rgb(0,100,200); font-family: "FontAwesome"; font-size: 14px; opacity: .65; position: absolute; right: 30px; bottom: 2px; }
 blockquote p:first-child { margin-top: 0; }
 blockquote p:last-child { margin-bottom: 0; }
 
 hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
 
-.related-posts { border-top: 2px solid rgba(0,39,59,.08); /* disqus color */ border-bottom: 2px solid rgba(0,39,59,.08); /* disqus color */ padding: 20px 0 10px 0; margin: 20px 0; }
+.related-posts { padding: 20px 30px 10px 30px; margin: 20px -30px; background: #fff; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
 
 .preview { padding: 20px 0; border-radius: 2px; border-top: 1px solid #ddd; }
 .preview:first-of-type { border-top: 0; }
@@ -30,10 +32,11 @@ hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
 .preview header, .post header, .body-tags header { font-size: 12px; }
 .preview header a, .post header a, .body-tags header a { color: #666; }
 
-footer { border-top: 2px solid rgba(0,39,59,.08); /* disqus color */ margin-top: 10px; padding: 20px 0 0 0; }
+footer { border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); margin: 10px -30px -20px -30px; padding: 20px 30px 15px 30px; background: #ddd; }
 footer a { color: #666; }
 
 code { font-family: "Source Code Pro", monospace; }
 p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,0,.05); padding: 2px 5px; }
 pre { background-color: #fff; margin: 15px -30px; padding: 20px 30px; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
-.hljs { background-color: transparent; padding: 0; margin: 0; }
+
+.update { text-align: center; margin: 15px -30px; padding: 15px 30px; background: #fff; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
