@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Let's Encrypt with PHP
-tags: [ssl,encryption,letsencrypt]
+tags: [php,ssl,encryption,letsencrypt]
 ---
 
 [Let's Encrypt](https://letsencrypt.org/), the free and automated CA, started late last year into their public beta. They offer a pretty comprehensive client to automate the process of getting SSL clients and installing them. It will soon be [moved to a new home at EFF](https://letsencrypt.org/2016/03/09/le-client-new-home.html).
