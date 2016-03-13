@@ -13,6 +13,9 @@
 - slug: encryption
   name: encryption
 
+- slug: letsencrypt
+  name: letsencrypt
+
 - slug: php
   name: php
 
