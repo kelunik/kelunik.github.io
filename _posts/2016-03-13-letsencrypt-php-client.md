@@ -8,7 +8,16 @@ tags: [php,ssl,encryption,letsencrypt]
 
 If you're already using PHP and don't need / want the automatic installation of your free certificates or don't want to install Python, [here's a client for you](https://github.com/kelunik/acme-client).
 
+<div class="update">
+<b>Update @ 25.03.2016</b><br>
+You can use the client as PHAR now. I updated the blog post to reflect that. It's the recommended installation method.
+</div>
+
 [`kelunik/acme-client`](https://github.com/kelunik/acme-client) is able to issue and renew certificates using your already running webserver (e.g. Nginx or Apache). It's using the `http-01` challenge to prove your domain ownership / control to Let's Encrypt. If you want to know more about `http-01` and other challenge types, [read the current draft of the ACME specification](https://ietf-wg-acme.github.io/acme/).
+
+## Installation
+
+Go to the [GitHub Releases](https://github.com/kelunik/acme-client/releases/latest) page and download the latest `acme-client.phar`. [Further installation instructions are available in the official documentation](https://github.com/kelunik/acme-client/blob/master/doc/installation.md#instructions). This blog post assumes you installed it globally using a `acme-client.yml` configuration. If you don't use that configuration, you have to pass the `--storage` and `--server` arguments.
 
 ## Registering with Let's Encrypt
 
@@ -17,7 +26,7 @@ Before you can issue your first certificate, you have to create an account. All 
 To register a new account, use the following command:
 
 ```plain
-bin/acme setup -s letsencrypt --email me@example.com
+acme-client setup --email me@example.com
 ```
 
 Be sure to add an e-mail to get expiration reminders and other important notifications related to SSL.
@@ -26,13 +35,13 @@ Be sure to add an e-mail to get expiration reminders and other important notific
 
 As soon as you registered with Let's Encrypt, you're ready to issue your first certificate. Be sure your webserver is up and running.
 
-Let's Encrypt currently limits certificate issuance to five certificates per week. You might want to use their staging server for testing first, which has much higher rate limits. Use `letsencrypt:staging` instead of `letsencrypt` as server (`-s`).
+Let's Encrypt currently limits certificate issuance to five certificates per week. You might want to use their staging server for testing first, which has much higher rate limits. If you chose `letsencrypt` as your default server, append `-s letsencrypt:staging` to the command to use the staging server.
 
 ```plain
-bin/acme issue -s letsencrypt -d example.com:www.example.com -p /var/www
+acme-client issue -d example.com:www.example.com -p /var/www
 ```
 
-You can separate multiple domains (`-d`) as well as multiple paths (`-p`) by separating them with colons. If you specify less paths than domains, the last one will be used for the remaining domains. The client will request a challenge for each domain and will try to solve it. Once all challenges are solved, the client requests the certificate to be issued for all these domains and saves it to  `./data/certs/acme-v01.api.letsencrypt.org.directory/example.com`.
+You can separate multiple domains (`-d`) as well as multiple paths (`-p`) by separating them with colons (semicolons on Windows). If you specify less paths than domains, the last one will be used for the remaining domains. The client will request a challenge for each domain and will try to solve it. Once all challenges are solved, the client requests the certificate to be issued for all these domains and saves it to  `./data/certs/acme-v01.api.letsencrypt.org.directory/example.com`.
 
 The first domain will be used as common name and as name for saving it to the file system. There will be multiple files in the directory:
 
@@ -50,7 +59,7 @@ Theoretically, you could just setup a [cron](https://en.wikipedia.org/wiki/Cron)
 The client has a simple check mechanism to make renewal easier. You can use a cron that runs daily to check your certificates, only if they're going to expire soon, it will run the `issue` subcommand to renew the certificate.
 
 ```plain
-bin/acme check -s letsencrypt --name example.com || bin/acme issue ...
+acme-client check --name example.com || acme-client issue ...
 ```
 
 `--name` is the common name of the certificate. You can use `--ttl` to specify a time interval in days until the certificate will expire. So `--ttl 10` will renew, when the certificate is no longer valid than 10 days. Default value is `30`.
@@ -64,7 +73,7 @@ This mechanism prevents renewing too often, but ensures that automation doesn't 
 Last but not least, there are times where you want to revoke a certificate. This is mostly due to (potentially) compromised private keys.
 
 ```plain
-bin/acme revoke -s letsencrypt --name example.com
+acme-client revoke --name example.com
 ```
 
 As for `check`, `--name` is the common name of the certificate to revoke.
@@ -73,4 +82,4 @@ Note that revoking a certificate doesn't reset the rate limit as you might expec
 
 ## Support
 
-If you need help with the client, just leave a comment below. There's also a built-in help in the client, use `bin/acme --help` or `bin/acme subcommand --help`.
+If you need help with the client, just leave a comment below. There's also a built-in help in the client, use `acme-client --help` or `acme-client subcommand --help`.
