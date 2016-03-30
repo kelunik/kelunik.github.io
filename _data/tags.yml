@@ -4,6 +4,9 @@
 - slug: amphp
   name: amphp
 
+- slug: artax
+  name: artax
+
 - slug: async
   name: async
 
@@ -16,11 +19,20 @@
 - slug: letsencrypt
   name: letsencrypt
 
+- slug: mocking
+  name: mocking
+
 - slug: php
   name: php
 
+- slug: phpunit
+  name: phpunit
+
 - slug: promises
   name: promises
+
+- slug: quicktip
+  name: quicktip
 
 - slug: ssl
   name: ssl

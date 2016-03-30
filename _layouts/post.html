@@ -97,6 +97,16 @@
 		</header>
 
 		<main>
+            {% if post.tags.size > 0 %}
+                {% for tag in post.tags %}
+                    {% if tag == "quicktip" %}
+                        <div class="quicktip">
+                            This post is a QuickTip. Don't expect too much detail. Explore other <a href="/tags/quicktip.html">QuickTips</a>.
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
 			{{content}}
 
             {% assign hasSimilar = '' %}

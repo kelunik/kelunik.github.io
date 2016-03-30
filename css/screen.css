@@ -40,3 +40,4 @@ p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,
 pre { background-color: #fff; margin: 15px -30px; padding: 20px 30px; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
 
 .update { text-align: center; margin: 15px -30px; padding: 15px 30px; background: #fff; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
+.quicktip { background-color: #FF9479; color: #333; font-weight: bold; text-align: center; margin: 15px -30px; padding: 15px 30px; border-top: 1px solid rgba(0,0,0,.05); border-bottom: 1px solid rgba(0,0,0,.05); }
