@@ -63,7 +63,7 @@ const AERYS_OPTIONS = [
 ];
 
 $router = Aerys\router()->get("/", function(Aerys\Request $req, Aerys\Response $resp) {
-	$resp->send("<h1>Hello World!</h1>");
+	$resp->end("<h1>Hello World!</h1>");
 });
 
 $docroot = Aerys\root(__DIR__ . "/public");
@@ -89,7 +89,7 @@ A very simple example is a responder that responds always with the same content.
 ```php
 (new Aerys\Host)
 	->use(function(Aerys\Request $req, Aerys\Response $resp) {
-		$resp->send("<h1>It Works!</h1>");
+		$resp->end("<h1>It Works!</h1>");
 	});
 ```
 
@@ -99,7 +99,7 @@ A more complex responder is the built-in router which is based on NikiC's [FastR
 
 ```php
 $callable = function(Aerys\Request $req, Aerys\Response $resp, array $args) {
-	$resp->send("<h1>ID: " . htmlspecialchars($args["id"]) . "</h1>");
+	$resp->end("<h1>ID: " . htmlspecialchars($args["id"]) . "</h1>");
 };
 
 $router = Aerys\router();
@@ -125,3 +125,7 @@ $host->use($docroot);
 ## Advanced features
 
 There's still more, e.g. ["Getting Started with Aerys WebSockets"](/2015/10/20/getting-started-with-aerys-websockets.html) or Middlewares which will be covered in a future blog post.
+
+## Changelog
+
+* **Apr 16th 2016**<br>Replaced all invocations of `Response::send` with `Response::end`, since `Response::send` has been removed, as it was doing essentially the same as `Response::end`.

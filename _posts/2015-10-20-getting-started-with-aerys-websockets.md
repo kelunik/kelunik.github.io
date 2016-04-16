@@ -46,7 +46,7 @@ use function Aerys\websocket;
 $router = (new Router())
     ->route("GET", "/test", function(Request $req, Response $resp) {
         // just another example route
-        $resp->send("<h1>It works!</h1>");
+        $resp->end("<h1>It works!</h1>");
     })
     ->route("GET", "/ws", websocket(new Chat));
 
@@ -90,7 +90,7 @@ public function onHandshake(Request $request, Response $response) {
     $origin = $request->getHeader("origin");
     if ($origin !== "http://localhost:1337") {
         $response->setStatus(403);
-        $response->send("<h1>origin not allowed</h1>");
+        $response->end("<h1>origin not allowed</h1>");
         return null;
     }
     // Returned values will be passed to onOpen.
@@ -105,7 +105,7 @@ If we do not alter the status code, the connection will be accepted and `onOpen(
 
 Whenever a new message arrives, `onData(int $clientId, Websocket\Message $msg)` will be called. By yielding the `$msg`, you can get the message body. This is required to allow streaming messages instead of requiring the server to buffer all messages directly.
 
-You can send messages to a single client / a group of clients or all connected clients with `$endpoint->send(int|int[]|null $clientId, string $payload)`. When `$clientId` is `null`, the message will be broadcasted to all connected clients.
+You can send messages to a single client / a group of clients or all connected clients with `$endpoint->end(int|int[]|null $clientId, string $payload)`. When `$clientId` is `null`, the message will be broadcasted to all connected clients.
 
 A simple implementation broadcasting all messages which are received:
 
@@ -121,7 +121,7 @@ public function onData(int $clientId, Websocket\Message $msg) {
     // For more information, please read the "Getting Started with Amp" post
     // mentioned earlier.
     $body = yield $msg;
-	$this->endpoint->send(null, $body); // null broadcasts to all connected clients
+	$this->endpoint->end(null, $body); // null broadcasts to all connected clients
 }
 ```
 
@@ -130,3 +130,7 @@ public function onData(int $clientId, Websocket\Message $msg) {
 Aerys is now finally public and allows new ways of writing PHP web applications. However, it's not completely stable yet. To find inconsistencies and bad API decisions, people have to actually use it and file issues, please do!
 
 You can find a [completely runnable version of a demo chat application on GitHub](https://github.com/kelunik/demo-chat).
+
+## Changelog
+
+* **Apr 16th 2016**<br>Replaced all invocations of `Response::send` with `Response::end`, since `Response::send` has been removed, as it was doing essentially the same as `Response::end`.
