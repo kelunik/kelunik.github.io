@@ -39,7 +39,7 @@ Thanks to <a href="https://twitter.com/ZackBoehm/status/668524583310364672" targ
 
 If you want free SSL with encryption only, use self-signed certificates and don't add them to your trust store. *Then* you have encryption-only SSL.
 
-## The importance of Validation
+## The Importance of Validation
 
 > This is a key distinction – the true value of purchased SSL security arises from knowing that the owner of the cert is who they say they are, not simply that they have control of the domain they applied with.
 
@@ -63,7 +63,7 @@ This is totally wrong. LE does this, but other CAs offer free one year certifica
 
 > Additionally, free CAs place restrictions on issuing certs for domains that have existing certs from other CAs.
 
-**You totally didn't get the point of that**. This is LE specific and is a protection that all CAs should probably have, would really reduce the number of mis-issued domains. You can always issue certificates, even if there's already a service running by proving prove of the ownership of the corresponding private key.
+**You totally didn't get the point of that**. This is LE specific and is a protection that all CAs should probably have, would really reduce the number of mis-issued certificates. You can always issue certificates, even if there's already a service running by proving prove of ownership of the corresponding private key.
 
 ## Build Trust with Purchased SSL
 

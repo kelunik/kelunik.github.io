@@ -10,7 +10,7 @@ If you're already using PHP and don't need / want the automatic installation of 
 
 <div class="update">
 <b>Update @ 25.03.2016</b><br>
-You can use the client as PHAR now. I updated the blog post to reflect that. It's the recommended installation method.
+You can use the client as PHAR now. I updated the blog post to reflect that.<br>It's the recommended installation method.
 </div>
 
 [`kelunik/acme-client`](https://github.com/kelunik/acme-client) is able to issue and renew certificates using your already running webserver (e.g. Nginx or Apache). It's using the `http-01` challenge to prove your domain ownership / control to Let's Encrypt. If you want to know more about `http-01` and other challenge types, [read the current draft of the ACME specification](https://ietf-wg-acme.github.io/acme/).

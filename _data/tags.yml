@@ -13,6 +13,12 @@
 - slug: comment
   name: comment
 
+- slug: css
+  name: css
+
+- slug: design
+  name: design
+
 - slug: encryption
   name: encryption
 
@@ -36,6 +42,9 @@
 
 - slug: ssl
   name: ssl
+
+- slug: typography
+  name: typography
 
 - slug: websocket
   name: websocket
