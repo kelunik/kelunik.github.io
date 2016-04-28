@@ -34,7 +34,7 @@
 	<meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
 
 	{% if page.image != nil %}
-        <meta property="twitter:image" content="{{site.url}}{{page.image}}" />
+        <meta name="twitter:image" content="{{site.url}}{{page.image}}" />
         <meta property="og:image" content="{{site.url}}{{page.image}}" />
 	{% endif %}
 
