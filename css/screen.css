@@ -30,7 +30,7 @@ hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
 .excerpt p:last-child { margin-bottom: 0; }
 
 .preview header, .post header, .body-tags header { font-size: 12px; }
-.preview header a, .post header a, .body-tags header a { color: #666; }
+.preview header a, .post header a, .body-tags header a { color: #226cbd; }
 
 footer { font-size: 15px; border-top: 2px solid rgba(0,39,59,.08); margin: 4px 0 0 0; padding: 20px 0; }
 footer a { color: #666; }
