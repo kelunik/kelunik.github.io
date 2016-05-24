@@ -19,85 +19,85 @@
 <html>
 
 <head>
-	<title>{{page.title}}</title>
+    <title>{{page.title}}</title>
 
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-	<meta name="description" content="{{page.excerpt | strip_html | strip_newlines}}" />
+    <meta name="description" content="{{page.excerpt | strip_html | strip_newlines}}" />
 
-	<meta name="twitter:card" content="{% if page.image == nil %}summary{% else %}summary_large_image{% endif %}" />
-	<meta name="twitter:site" content="@kelunik" />
-	<meta name="twitter:creator" content="@kelunik" />
+    <meta name="twitter:card" content="{% if page.image == nil %}summary{% else %}summary_large_image{% endif %}" />
+    <meta name="twitter:site" content="@kelunik" />
+    <meta name="twitter:creator" content="@kelunik" />
 
-	<meta property="og:url" content="{{site.url}}{{page.url}}" />
-	<meta property="og:title" content="{{page.title}}" />
-	<meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
 
-	{% if page.image != nil %}
+    {% if page.image != nil %}
         <meta name="twitter:image" content="{{site.url}}{{page.image}}" />
         <meta property="og:image" content="{{site.url}}{{page.image}}" />
-	{% endif %}
+    {% endif %}
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Bitter|Source+Code+Pro:300,400,700" />
-	<link rel="stylesheet" href="/css/screen.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Bitter|Source+Code+Pro:300,400,700" />
+    <link rel="stylesheet" href="/css/screen.css" />
     <link rel="stylesheet" href="/css/hljs.css" />
 
-	<link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-	<script>
-		var disqus_shortname = "kelunik";
+    <script>
+        var disqus_shortname = "kelunik";
 
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-47364804-6', {
-			'siteSpeedSampleRate': 10
-		});
+        ga('create', 'UA-47364804-6', {
+            'siteSpeedSampleRate': 10
+        });
 
-		ga('send', 'pageview');
-	</script>
+        ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
-	<article class="post">
-		<header>
-			<h1>{{page.title}}</h1>
+    <article class="post">
+        <header>
+            <h1>{{page.title}}</h1>
 
-			<div class="header-sub">
-				<a href="/" class="header-sub-item"><i class="fa fa-angle-left"></i> back to overview</a>
+            <div class="header-sub">
+                <a href="/" class="header-sub-item"><i class="fa fa-angle-left"></i> back to overview</a>
 
-				<time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
-					<i class="fa fa-clock-o"></i>
-					{{page.date | date: '%d. %B %Y'}}
-				</time>
+                <time class="header-sub-item pubdate" datetime="{{post.date | date: '%Y-%m-%d'}}" pubdate>
+                    <i class="fa fa-clock-o"></i>
+                    {{page.date | date: '%d. %B %Y'}}
+                </time>
 
-				<span class="header-sub-item comments">
-					<i class="fa fa-comments"></i>
-					<span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{page.url}}"></span>
-				</span>
+                <span class="header-sub-item comments">
+                    <i class="fa fa-comments"></i>
+                    <span class="disqus-comment-count" data-disqus-url="http://blog.kelunik.com{{page.url}}"></span>
+                </span>
 
-				<span class="header-sub-item tags">
-					{{tags_content}}
-				</span>
-			</div>
-		</header>
+                <span class="header-sub-item tags">
+                    {{tags_content}}
+                </span>
+            </div>
+        </header>
 
-		<main>
+        <main>
             {% if post.tags.size > 0 %}
                 {% for tag in post.tags %}
                     {% if tag == "quicktip" %}
@@ -108,7 +108,7 @@
                 {% endfor %}
             {% endif %}
 
-			{{content}}
+            {{content}}
 
             {% assign hasSimilar = '' %}
             {% for post in site.related_posts %}
@@ -134,19 +134,19 @@
                 </ul></div>
             {% endif %}
 
-			<div id="disqus_thread"></div>
-			<noscript class="disqus-noscript">Please enable Javascript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-		</main>
+            <div id="disqus_thread"></div>
+            <noscript class="disqus-noscript">Please enable Javascript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </main>
 
-		<footer>
+        <footer>
             <a class="footer-item" href="https://twitter.com/kelunik" target="_blank"><i class="fa fa-twitter"></i> kelunik</a>
-			<a class="footer-item" href="https://github.com/kelunik" target="_blank"><i class="fa fa-github"></i> kelunik</a>
+            <a class="footer-item" href="https://github.com/kelunik" target="_blank"><i class="fa fa-github"></i> kelunik</a>
             <a class="footer-item" href="https://raw.githubusercontent.com/kelunik/kelunik.github.io/master/pgp.asc"><i class="fa fa-key"></i> PGP Key</a>
-		</footer>
-	</article>
+        </footer>
+    </article>
 
-	<script src="//kelunik.disqus.com/embed.js" async defer></script>
-	<script src="//kelunik.disqus.com/count.js" async defer></script>
+    <script src="//kelunik.disqus.com/embed.js" async defer></script>
+    <script src="//kelunik.disqus.com/count.js" async defer></script>
 </body>
 
 </html>

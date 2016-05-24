@@ -28,6 +28,9 @@
 - slug: mocking
   name: mocking
 
+- slug: nginx
+  name: nginx
+
 - slug: php
   name: php
 

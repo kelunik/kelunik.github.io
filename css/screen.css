@@ -44,7 +44,7 @@ p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,
 pre { background-color: #fff; margin: 15px -20px; padding: 15px 20px; border: 1px solid #eee; border-radius: 4px; white-space: pre-wrap; }
 
 .update { text-align: center; margin: 15px -20px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 4px; }
-.quicktip { color: #543; font-weight: bold; text-align: center; margin: 15px -20px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 4px; }
+.quicktip { color: #334; font-weight: normal; text-align: center; margin: 15px -20px; padding: 15px 20px; background: #bef; border: 1px solid #9cf; border-radius: 4px; }
 .related-posts { margin: 20px 0; }
 .related-posts ul { margin: 0; padding: 0 0 0 30px; }
 .related-posts li { margin: 0; padding: 0; }
