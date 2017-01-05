@@ -105,7 +105,7 @@ If we do not alter the status code, the connection will be accepted and `onOpen(
 
 Whenever a new message arrives, `onData(int $clientId, Websocket\Message $msg)` will be called. By yielding the `$msg`, you can get the message body. This is required to allow streaming messages instead of requiring the server to buffer all messages directly.
 
-You can send messages to a single client / a group of clients or all connected clients with `$endpoint->end(int|int[]|null $clientId, string $payload)`. When `$clientId` is `null`, the message will be broadcasted to all connected clients.
+You can send messages to a single client / a group of clients or all connected clients with `$endpoint->send(int|int[]|null $clientId, string $payload)`. When `$clientId` is `null`, the message will be broadcasted to all connected clients.
 
 A simple implementation broadcasting all messages which are received:
 
@@ -121,7 +121,7 @@ public function onData(int $clientId, Websocket\Message $msg) {
     // For more information, please read the "Getting Started with Amp" post
     // mentioned earlier.
     $body = yield $msg;
-	$this->endpoint->end(null, $body); // null broadcasts to all connected clients
+	$this->endpoint->send(null, $body); // null broadcasts to all connected clients
 }
 ```
 
