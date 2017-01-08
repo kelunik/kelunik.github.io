@@ -4,6 +4,9 @@
 - slug: amphp
   name: amphp
 
+- slug: appveyor
+  name: appveyor
+
 - slug: artax
   name: artax
 
@@ -15,6 +18,9 @@
 
 - slug: css
   name: css
+
+- slug: composer
+  name: composer
 
 - slug: design
   name: design
@@ -45,6 +51,12 @@
 
 - slug: ssl
   name: ssl
+
+- slug: tests
+  name: tests
+
+- slug: travis-ci
+  name: travis-ci
 
 - slug: typography
   name: typography
