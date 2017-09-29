@@ -71,6 +71,19 @@
 
         ga('send', 'pageview');
     </script>
+
+    <script>
+        (function () {
+            var a = document.createElement('a');
+            a.href = window.location;
+
+            var today = new Date();
+
+            if (a.hash === "#r11" && today.getDay() === 5) {
+                window.location = "https://rebecca.blackfriday/";
+            }
+        })();
+    </script>
 </head>
 
 <body>
