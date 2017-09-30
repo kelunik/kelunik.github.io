@@ -3,7 +3,7 @@ layout: post
 title: An Introduction to Generators in PHP
 tags: [php,amphp]
 ---
-Generators have been added to PHP in version 5.5, yet the have received rather low attention. The [PHP 5.5 migration guide](http://php.net/manual/en/migration55.new-features.php) introduced them as way to implement simple iterators.
+Generators have been added to PHP in version 5.5, yet they have received rather low attention. The [PHP 5.5 migration guide](http://php.net/manual/en/migration55.new-features.php) introduced them as way to implement simple iterators.
 
 > Support for generators has been added via the yield keyword. Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.
 
