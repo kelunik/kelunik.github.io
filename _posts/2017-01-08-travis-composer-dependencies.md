@@ -65,4 +65,4 @@ This will run six jobs on Travis.
 
 ![Travis CI Builds](/img/2017/01/travis/tests.png)
 
-Note that Travis CPU time isn't unlimited as already noted in Cees-Jan Kiewiet's blog post. If you support a lot of PHP versions ([you should not](http://blog.ircmaxell.com/2014/12/on-php-version-requirements.html)), you might want to use Travis' `include` or `exclude` options instead of additionally to exclude certain versions.
+Note that Travis CPU time isn't unlimited as already noted in Cees-Jan Kiewiet's blog post. If you support a lot of PHP versions ([you should not](https://blog.ircmaxell.com/2014/12/on-php-version-requirements.html)), you might want to use Travis' `include` or `exclude` options instead of additionally to exclude certain versions.

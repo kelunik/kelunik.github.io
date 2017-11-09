@@ -3,7 +3,7 @@ layout: post
 title: An Introduction to Generators in PHP
 tags: [php,amphp]
 ---
-Generators have been added to PHP in version 5.5, yet they have received rather low attention. The [PHP 5.5 migration guide](http://php.net/manual/en/migration55.new-features.php) introduced them as way to implement simple iterators.
+Generators have been added to PHP in version 5.5, yet they have received rather low attention. The [PHP 5.5 migration guide](https://secure.php.net/manual/en/migration55.new-features.php) introduced them as way to implement simple iterators.
 
 > Support for generators has been added via the yield keyword. Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.
 
@@ -41,7 +41,7 @@ foreach (range(1, 100) as $i) {
 
 So what did we gain now apart from a shorter definition? What does `yield` really do? Why does the first function definition even return something, even if there's no `return`?
 
-Let's start with the return value. Generators are special functions in PHP. Whenever a function contains `yield`, it's no longer a normal function anymore, but always returns a [`Generator`](http://php.net/manual/en/class.generator.php). `Generator` implements the [`Iterator`](http://php.net/manual/en/class.iterator.php) interface, that's why it works with `foreach`.
+Let's start with the return value. Generators are special functions in PHP. Whenever a function contains `yield`, it's no longer a normal function anymore, but always returns a [`Generator`](https://secure.php.net/manual/en/class.generator.php). `Generator` implements the [`Iterator`](https://secure.php.net/manual/en/class.iterator.php) interface, that's why it works with `foreach`.
 
 In the following code block we rewrite the previous `foreach` loop to make use of the methods of the `Iterator` interface. You can see the result on [3v4l.org](https://3v4l.org/5uF7I).
 

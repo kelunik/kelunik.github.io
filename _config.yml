@@ -3,4 +3,4 @@ kramdown:
   toc_levels: 2..3
 
 exclude: ["vendor"]
-url: http://blog.kelunik.com
+url: https://blog.kelunik.com

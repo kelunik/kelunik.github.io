@@ -12,7 +12,7 @@ I added quotes everywhere and took their headings to make it easy to read the co
 <b>Update</b><br>
 Namecheap updated their blog post and removed almost all of the criticized points.
 <br>
-Thanks to <a href="https://twitter.com/ZackBoehm/status/668524583310364672" target="_blank">@ZackBoehm</a> for saving the <a href="http://archive.is/qULPE" target="_blank">original blog post</a>.
+Thanks to <a href="https://twitter.com/ZackBoehm/status/668524583310364672" target="_blank">@ZackBoehm</a> for saving the <a href="https://archive.is/qULPE" target="_blank">original blog post</a>.
 </div>
 
 ## Free SSL is Encryption Only
@@ -45,11 +45,11 @@ If you want free SSL with encryption only, use self-signed certificates and don'
 
 **Yes**, absolutely right. DV checks the domain ownership, OV and EV check the actual organization behind.
 
-The following points are all specific to LE (short for [Let's Encrypt](http://letsencrypt.org)), a currently in closed beta CA that will issue free DV certificates.
+The following points are all specific to LE (short for [Let's Encrypt](https://letsencrypt.org)), a currently in closed beta CA that will issue free DV certificates.
 
 > Short lifetimes – Free certs have 90-day lifetimes, standard. Though future automation may eliminate the need to renew every 90 days, short lifetimes will always mean more potential points of failure.
 
-This is totally wrong. LE does this, but other CAs offer free one year certificates like [StartSSL](http://www.startssl.com/) or [WoSign](http://www.wosign.com/english/freessl.htm).
+This is totally wrong. LE does this, but other CAs offer free one year certificates like [StartSSL](https://www.startcomca.com/) or [WoSign](https://www.wosign.com/english/freessl.htm).
 
 > No wildcards – Free certificates secure single domains only. They cannot secure multiple subdomains of a domain.
 

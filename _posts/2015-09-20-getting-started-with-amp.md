@@ -12,13 +12,13 @@ While your script isn't calculating anything, it's usually waiting for I/O, such
 * A task scheduler that executes those other tasks while one is waiting,
 * and either callbacks or pause- and resumable functions.
 
-In PHP there's no native task scheduler like we have in Javascript engines, therefore it has to be implemented in PHP. Amp provides multiple implementations of a so-called [`Reactor`](https://github.com/amphp/amp/blob/master/lib/Reactor.php). There's a `NativeReactor` that is implemented in pure PHP, but there are also other implementations using extensions underneath. There's more information about the different implementations [in the official documentation](http://amphp.org/docs/amp/reactor-concepts.html#reactor-implementations). Extension based reactor implementations are important when you're dealing with tens of thousands of watchers, but the native implementation might be faster with just a few watchers.
+In PHP there's no native task scheduler like we have in Javascript engines, therefore it has to be implemented in PHP. Amp provides multiple implementations of a so-called [`Reactor`](https://github.com/amphp/amp/blob/1.x/lib/Reactor.php). There's a `NativeReactor` that is implemented in pure PHP, but there are also other implementations using extensions underneath. There's more information about the different implementations [in the official documentation](https://amphp.org/amp/event-loop/#implementations). Extension based reactor implementations are important when you're dealing with tens of thousands of watchers, but the native implementation might be faster with just a few watchers.
 
-Regarding our second point, both options are possible with Amp. The issue with callbacks is that they're not that readable and you end up in a callback hell. With PHP's [Generators](http://php.net/manual/en/language.generators.php), which were introduced in PHP 5.5, it's not only possible to use them as iterators, but also to create pause- and resumable functions. [Nikita Popov](https://github.com/nikic) wrote a [excellent blog post about using them for cooperative multitasking](http://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html). Whenever you `yield` a `Promise` in an Amp context, the task scheduler will give other tasks execution time and resume when the yielded `Promise` resolves.
+Regarding our second point, both options are possible with Amp. The issue with callbacks is that they're not that readable and you end up in a callback hell. With PHP's [Generators](https://secure.php.net/manual/en/language.generators.php), which were introduced in PHP 5.5, it's not only possible to use them as iterators, but also to create pause- and resumable functions. [Nikita Popov](https://github.com/nikic) wrote a [excellent blog post about using them for cooperative multitasking](https://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html). Whenever you `yield` a `Promise` in an Amp context, the task scheduler will give other tasks execution time and resume when the yielded `Promise` resolves.
 
 ## Promises
 
-`Amp\Promise` is the basic unit for concurrency with Amp. Promises are placeholders for values or tasks that aren't yet complete. You can find [more about promises](http://amphp.org/docs/amp/managing-concurrency.html#promises) in the documentation. What's important for now is just the `when` method. Basically, code using promises will look like this:
+`Amp\Promise` is the basic unit for concurrency with Amp. Promises are placeholders for values or tasks that aren't yet complete. You can find [more about promises](https://amphp.org/amp/promises/) in the documentation. What's important for now is just the `when` method. Basically, code using promises will look like this:
 
 ```php
 $promise = asyncTask(...);
@@ -59,7 +59,7 @@ $promise->when(function($error, $result) {
 });
 ```
 
-For more advanced use cases, there are [combinators](http://amphp.org/docs/amp/managing-concurrency.html#combinators) to wait for multiple promises at once.
+For more advanced use cases, there are [combinators](https://amphp.org/amp/promises/combinators) to wait for multiple promises at once.
 
 ## Amp context and finally a `"Hello World"`
 

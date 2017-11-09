@@ -7,7 +7,7 @@ Modern web technology lets us create real time apps within the users browser. We
 
 Fortunately, there's a new kind of server now which has just become open source after years of work: [Aerys](https://github.com/amphp/aerys). It's an application server completely written in PHP and based on the [Amp Concurrency Framework](https://github.com/amphp/amp). If you're not familiar with Amp yet, you may want to read my last blog post ["Getting Started with Amp"](/2015/09/20/getting-started-with-amp.html) first.
 
-> Aerys is a full-featured HTTP server, but this blog post will just cover WebSockets! There's [another blog post explaining the basics in general](http://blog.kelunik.com/2015/10/21/getting-started-with-aerys.html).
+> Aerys is a full-featured HTTP server, but this blog post will just cover WebSockets! There's [another blog post explaining the basics in general](/2015/10/21/getting-started-with-aerys.html).
 
 ## Installation
 

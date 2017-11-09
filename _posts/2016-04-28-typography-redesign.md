@@ -9,7 +9,7 @@ Typography plays an important role when designing, not only for the web. It's mo
 
 When writing the design for my blog, I already had in mind that `font-size`, `line-height` and `width` of the lines are important. I increased the default line height to `180%` and gave all headings more whitespace for better readability.
 
-What I didn't have in mind is how they relate to each other. The wider the lines are, the higher the lines should be. This ensures readers find the next line when they return to the beginning from the previous line. You can read more about the golden ratio in typography in the [blog post](http://www.pearsonified.com/2011/12/golden-ratio-typography.php) by [Chris Pearson](https://twitter.com/pearsonified).
+What I didn't have in mind is how they relate to each other. The wider the lines are, the higher the lines should be. This ensures readers find the next line when they return to the beginning from the previous line. You can read more about the golden ratio in typography in the [blog post](https://www.pearsonified.com/2011/12/golden-ratio-typography.php) by [Chris Pearson](https://twitter.com/pearsonified).
 
 After reading that post, I started redesigning my blog. You can see the result live. Below is a comparison of the old vs. new design.
 
@@ -17,7 +17,7 @@ After reading that post, I started redesigning my blog. You can see the result l
 
 Previously, I used Lato as font for my blog, a [sans-serif](https://en.wikipedia.org/wiki/Sans-serif) font type. Personally, I prefer [serif](https://en.wikipedia.org/wiki/Serif) font types for longer texts, because I find it more readable. I switched to [`Bitter`](https://www.google.com/fonts/specimen/Bitter), which is available on Google Fonts. There's an interesting blog post, if you want to [read more about serif vs. sans-serif fonts](http://alexpoole.info/blog/which-are-more-legible-serif-or-sans-serif-typefaces/).
 
-I made the font a little larger and most importantly reduced the line width. I used the [Golden Ratio Typography Calculator](http://www.pearsonified.com/typography/) with font size set to `15px` and content width set to `700px`. There were four suggestions, I tried all and chose the one that I liked best.
+I made the font a little larger and most importantly reduced the line width. I used the [Golden Ratio Typography Calculator](https://www.pearsonified.com/typography/) with font size set to `15px` and content width set to `700px`. There were four suggestions, I tried all and chose the one that I liked best.
 
 I also removed the dark background. I thought it's good to have a dark background, so it's easy to focus on the content. But actually, it's way more distracting than a white background without any borders or shadows.
 
