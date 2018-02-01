@@ -37,7 +37,7 @@ The interface specifies that you can always pass a `Tone` object and will receiv
 This is still true for the implementation in `Dog`.
 It will accept a `Tone` object just fine.
 Additionally, it will also accept anything else, maybe it can convert anything to a sound.
-Note that the implementation of `Doc` clearly knows that it accepts every type, as it doesn't specify one.
+Note that the implementation of `Dog` clearly knows that it accepts every type, as it doesn't specify one.
 The interface is just there to give the _caller_ a guarantee.
 
 For completeness, that blog post further says:
