@@ -1,8 +1,6 @@
-body { margin: 0; background: #fafafa; font-family: "Bitter", serif; font-size: 16px; tab-size: 4; line-height: 27px; color: #000; }
+body { margin: 0; background: #fafafa; font-family: "Karma", serif; font-size: 16px; tab-size: 4; line-height: 27px; color: #000; }
 article { padding: 30px 40px 0 40px; margin: 0 auto; max-width: 800px; min-height: 100vh; box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 300; }
-h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-weight: 300; }
 h1 { font-size: 28px; margin: 0; padding: 8px 0; }
 h2 { font-size: 25px; margin: 25px 0 15px 0; padding: 10px 0; }
 h2 > a { color: #226cbd; text-decoration: none; }
@@ -41,10 +39,11 @@ footer a { color: #666; }
 
 code { font-family: "Source Code Pro", monospace; font-size: 14px; overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-all; word-break: break-word; }
 p code { border-radius: 3px; background-color: #fff; border: 1px solid rgba(0,0,0,.05); padding: 2px 5px; }
-pre { background-color: #fff; margin: 15px -20px; padding: 15px 20px; border: 1px solid #eee; border-radius: 4px; white-space: pre-wrap; }
+pre { background-color: #fff; margin: 10px -10px; padding: 10px; border: 1px solid rgba(0,0,0,.1); border-radius: 2px; white-space: pre-wrap; }
+pre code { font-size: 13px; line-height: 1.4; }
 
 .update { text-align: center; margin: 15px -20px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 4px; }
-.quicktip { color: #334; font-weight: normal; text-align: center; margin: 15px -20px; padding: 15px 20px; background: #bef; border: 1px solid #9cf; border-radius: 4px; }
+.quicktip { border: 2px solid #bef; font-weight: normal; text-align: center; margin: 10px -10px; padding: 10px; border-radius: 2px; }
 .related-posts { margin: 20px 0; }
 .related-posts ul { margin: 0; padding: 0 0 0 30px; }
 .related-posts li { margin: 0; padding: 0; }
