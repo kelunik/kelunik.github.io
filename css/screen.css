@@ -1,5 +1,13 @@
-body { margin: 0; background: #fafafa; font-family: "Karma", serif; font-size: 16px; tab-size: 4; line-height: 27px; color: #000; }
-article { padding: 30px 40px 0 40px; margin: 0 auto; max-width: 800px; min-height: 100vh; box-sizing: border-box; }
+body { margin: 0; padding: 0 30px; background: #fafafa; font-family: "Karma", serif; font-size: 16px; tab-size: 4; line-height: 27px; color: #000; }
+article { background: #fff; margin: 30px auto; box-shadow: 0 0 2px rgba(0,0,0,.15), 0 2px 4px rgba(0,0,0,.3); padding: 30px 40px 0 40px; max-width: 800px; min-height: 100vh; box-sizing: border-box; }
+
+article > header { border-bottom: 1px solid rgba(0,0,0,.05); margin: -30px -40px 0 -40px; padding: 30px 30px 15px 40px; background: #eee; }
+article > footer { font-size: 15px; border-top: 1px solid rgba(0,0,0,.05); margin: 10px -40px -30px -40px; padding: 20px 30px 20px 40px; background: #eee; }
+
+footer a { color: #666; }
+.footer-item { margin-right: 20px; }
+
+#disqus_thread { border-top: 1px solid rgba(0,0,0,.05); margin: 10px -40px -10px -40px; padding: 30px 40px; background: #fafafa; }
 
 h1 { font-size: 28px; margin: 0; padding: 8px 0; }
 h2 { font-size: 25px; margin: 25px 0 15px 0; padding: 10px 0; }
@@ -16,7 +24,7 @@ blockquote p:last-child { margin-bottom: 0; }
 
 hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
 
-.preview { padding: 10px 0 20px 0; border-top: 1px solid #ddd; }
+.preview { margin-left: -40px; margin-right: -40px; padding: 10px 40px 20px 40px; border-top: 1px solid #ddd; }
 .preview:first-of-type { border-top: 0; }
 .preview h2 { margin: 4px 0; }
 .preview header { font-size: 12px; }
@@ -29,10 +37,6 @@ hr { height: 0; border: 0; border-bottom: 1px solid #ddd; margin: 20px 0; }
 
 .preview header, .post header, .body-tags header { font-size: 12px; }
 .preview header a, .post header a, .body-tags header a { color: #226cbd; }
-
-footer { font-size: 15px; border-top: 2px solid rgba(0,39,59,.08); margin: 4px 0 0 0; padding: 20px 0; }
-footer a { color: #666; }
-.footer-item { margin-right: 20px; }
 
 .post main img { max-width: 100%; box-shadow: 0 0 6px rgba(0,0,0,.1), 0 0 30px rgba(0,0,0,.1); }
 .post main table { max-width: 100%; }
