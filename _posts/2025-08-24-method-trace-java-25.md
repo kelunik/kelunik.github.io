@@ -40,7 +40,7 @@ public class MethodTrace {
                 "jdk.MethodTrace#stackTrace", "false", //
                 "jdk.MethodTrace#filter", "@" + Timed.class.getName());
 
-        LongHistogram methodTiming = GlobalOpenTelemetry.getMeter("jdk.MethodTiming") //
+        LongHistogram methodTiming = GlobalOpenTelemetry.getMeter("application") //
                 .histogramBuilder("method_timing")  //
                 .setUnit("ns") //
                 .ofLongs() //
@@ -62,7 +62,7 @@ public class MethodTrace {
 
                 methodTiming.record(duration.toNanos(), attributes);
 
-                System.out.println(methodType + "." + methodName + " called (" + duration + ")");
+                System.out.println(methodType + "." + methodName + " (" + duration + ")");
             });
 
             rs.setSettings(settings);
