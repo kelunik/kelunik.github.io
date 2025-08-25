@@ -55,9 +55,7 @@ public class MethodTrace {
                 String methodType = method.getType().getName();
 
                 Attributes attributes = Attributes.builder() //
-                        .put("method", methodType + "." + methodName) //
-                        .put("method_type", methodType) //
-                        .put("method_name", methodName) //
+                        .put("code.function.name", methodType + "." + methodName) //
                         .build();
 
                 methodTiming.record(duration.toNanos(), attributes);
